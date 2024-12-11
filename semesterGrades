@@ -1,0 +1,31 @@
+package semestergrades;
+import java.util.Scanner;
+
+public class SemesterGrades {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        //variables
+        double quarterOne;
+        double quarterTwo;
+        double average;
+        double exam;
+        double examPercent;
+        double averagePercent;
+        double finalGrade;
+       
+        //printing statements
+        System.out.println("This program will calculate your semester grades.");
+        System.out.println("What is your grade for the first quarter?");
+        quarterOne = in.nextDouble();
+        System.out.println("What is your grade for the second quarter?");
+        quarterTwo = in.nextDouble();
+        average = (quarterOne + quarterTwo)/2;
+        System.out.println("What grade did you get / are hoping to get on your final exam?");
+        exam = in.nextDouble();
+        averagePercent = average*0.8;
+        examPercent = exam*0.2;
+        finalGrade = (int)(examPercent + averagePercent);
+        System.out.println("Your grade for the semester is " + finalGrade);
+    }
+   
+}
